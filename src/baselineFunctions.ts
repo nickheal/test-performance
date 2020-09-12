@@ -1,7 +1,7 @@
 export default {
   standard: {
     expectedMsRunTime: 12,
-    func: (dummyParam) => {
+    func: (dummyParam?: number) => {
       function test() {}
 
       const a = dummyParam || Math.random();
