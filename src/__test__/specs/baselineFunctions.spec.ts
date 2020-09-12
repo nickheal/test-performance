@@ -1,4 +1,4 @@
-import baselineFunctions from '../../src/baselineFunctions';
+import baselineFunctions from '../../baselineFunctions';
 
 describe('baselineFunctions', () => {
   it('running baseline function for 100% coverage', async () => {

@@ -3,13 +3,8 @@ import getScore from './getScore';
 /**
  * This compares the target function's performance against a
  * known baseline function.
- *
- * @param {function} baselineFunc - the known baseline function to compare against
- * @param {function} targetFunc - the target function to test
- *
- * @returns {number[]}
  */
-export default async function runTests(baselineFunc, targetFunc) {
+export default async function runTests(baselineFunc: Function, targetFunc: Function): Promise<[number, number]> {
   /**
    * Tests deliberately run in sequence to catch performance changes over time
    */

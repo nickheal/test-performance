@@ -1,7 +1,7 @@
 import useMultiPossibility from 'use-multi-possibility';
-import getPerformanceScore from '../../src';
+import getPerformanceScore from '../../index';
 
-jest.mock('../../src/perfTest', () => ({
+jest.mock('../../perfTest', () => ({
   __esModule: true,
   default: () => 100,
 }));
@@ -12,7 +12,7 @@ describe('getPerformanceScore', () => {
     expect(score).toBe(12);
   });
 
-  useMultiPossibility(([arg]) => {
+  useMultiPossibility(([arg]: any[]) => {
     it('should throw an error if the argument is not a function', async () => {
       expect(async () => getPerformanceScore(arg)).rejects.toThrow();
     });
